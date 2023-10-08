@@ -79,8 +79,8 @@ body #cyberPhone__Main #cyberPhone__Filter {
   border: 5px solid rgb(255, 255, 255);
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  margin-top: 20px;
+  width: 80%;
+  margin: 0 auto;
 }
 #cyberPhone__Cart .cart__top {
   display: flex;
