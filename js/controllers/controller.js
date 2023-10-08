@@ -17,7 +17,7 @@ function renderProductList(listProduct) {
   }
   document.querySelector("#tbodyPhone").innerHTML = resultString;
 }
-function getProductionInformation() {
+function getProductInformation() {
   var id = document.querySelector("#productID").value;
   var name = document.querySelector("#productName").value;
   var price = document.querySelector("#productPrice").value;
