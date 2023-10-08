@@ -8,7 +8,7 @@ body {
 body #cyberPhone__Main {
   margin: 0 auto;
   text-align: center;
-  width: 80%;
+  width: 100%;
 }
 body #cyberPhone__Main a {
   padding: 2px 5px;
@@ -179,6 +179,7 @@ body #cyberPhone__Main #cyberPhone__Filter {
 #cyberPhone__Shop {
   display: flex;
   justify-content: center;
+  width: 100%;
   margin: 10px 0 200px 0;
 }
 #cyberPhone__Shop .cyberPhone__Card {
