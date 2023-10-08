@@ -17,14 +17,11 @@ function fetchProductList() {
 }
 fetchProductList();
 function productAddition() {
-  var product = getProductionInformation();
-  var check = true;
-  if (check) {
-    addProduct(product).then(() => {
-      fetchProductList();
-      resetForm();
-    });
-  }
+  var product = getProductInformation();
+  addProduct(product).then(() => {
+    fetchProductList();
+    resetForm();
+  });
 }
 function productDeletion(id) {
   deleteProduct(id).then(() => {
@@ -47,14 +44,11 @@ function productEdition(id) {
   });
 }
 function productUpdate() {
-  var product = getProductionInformation();
-  var check = true;
-  if (check) {
-    updateProduct(product.id, product).then(() => {
-      fetchProductList();
-      closeProductForm();
-    });
-  }
+  var product = getProductInformation();
+  updateProduct(product.id, product).then(() => {
+    fetchProductList();
+    closeProductForm();
+  });
   resetForm();
 }
 function productSearching() {
