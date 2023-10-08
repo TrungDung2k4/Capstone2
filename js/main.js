@@ -50,10 +50,7 @@ function productUpdate() {
   var product = getProductionInformation();
   var check = true;
   if (check) {
-    updateProduct(
-      product.id,
-      product
-    ).then(() => {
+    updateProduct(product.id, product).then(() => {
       fetchProductList();
       closeProductForm();
     });
@@ -61,10 +58,13 @@ function productUpdate() {
   resetForm();
 }
 function productSearching() {
-  var _name = document.querySelector("#productSearch").trim().toLowerCase();
+  var _name = document
+    .querySelector("#productSearch")
+    .value.trim()
+    .toLowerCase();
   getProductList(_name).then((response) => {
     var result = response.data.filter((product) =>
-      product.name.toLowercase().includes(_name)
+      product.name.toLowerCase().includes(_name)
     );
     renderProductList(result);
   });
@@ -74,7 +74,7 @@ function productSorting() {
     response.data.sort(
       (productA, productB) => +productA.price - +productB.price
     );
-    fetchProductList();
+    renderProductList(response.data);
   });
 }
 
