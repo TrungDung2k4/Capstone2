@@ -158,7 +158,7 @@ const renderFillTable = (productList) =>{
    getElm('#cyberPhone__Shop').innerHTML = htmlContent
         }
         else if(fillValue === '1'){
-            getElm('#alert__choses').style.display = 'block'
+            getProductsList()
         }
     })
     
