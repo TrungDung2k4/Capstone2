@@ -66,42 +66,42 @@ const renderTable = (productList) => {
     productList.forEach((product) => {
         htmlContent +=
             `
-        <div class="cyberPhone__Card">
-        <div class="topLogo">
-            <div class="logo">
-                <span>
-                    ${product.type}
-                </span>
-            </div>
-            <div class="infor">
-                <p>
-                    In Stock
-                </p>
-            </div>
-        </div>
-        <div class="img">
-            <img src="${product.img}" alt="">
-        </div>
-        <div class="detail">
-            <div class="detail__Name">
-                <h4>${product.name}</h4>
-            </div>
-            <div class="detail__Caption">
-                <h5>${product.desc}</h5>
-            </div>
-            <div class="detail__Desc">
-                <h6>${product.screen}</h6>
-                <h6>${product.backCamera}</h6>
-                <h6>${product.frontCamera}</h6>
-            </div>
-            <div class="detail__Bot">
-                <div class="bot__Price">
-                    <p>$${product.price}</p>
+            <div class="cyberPhone__Card col-xl-2 col-lg-4 col-md-6 col-sm-8 col-12">
+            <div class="topLogo">
+                <div class="logo">
+                    <span>
+                        ${product.type}
+                    </span>
                 </div>
-                <button onclick="addition('${product.id}', '${product.img}', '${product.name}', '${product.price}', '${1}')">ADD</button>
+                <div class="infor">
+                    <p>
+                        In Stock
+                    </p>
+                </div>
+            </div>
+            <div class="img">
+                <img src="${product.img}" alt="">
+            </div>
+            <div class="detail">
+                <div class="detail__Name">
+                    <h4>${product.name}</h4>
+                </div>
+                <div class="detail__Caption">
+                    <h5>${product.desc}</h5>
+                </div>
+                <div class="detail__Desc">
+                    <h6>${product.screen}</h6>
+                    <h6>${product.backCamera}</h6>
+                    <h6>${product.frontCamera}</h6>
+                </div>
+                <div class="detail__Bot">
+                    <div class="bot__Price">
+                        <p>$${product.price}</p>
+                    </div>
+                    <button onclick="addition('${product.id}', '${product.img}', '${product.name}', '${product.price}', '${1}')">ADD</button>
+                </div>
             </div>
         </div>
-    </div>
     `
     });
 
@@ -118,42 +118,42 @@ const renderFillTable = (productList) =>{
         if(product.type === fillValue){
            htmlContent +=
            `
-       <div class="cyberPhone__Card">
-       <div class="topLogo">
-           <div class="logo">
-               <span>
-                   <i class="fab fa-apple"></i>
-               </span>
-           </div>
-           <div class="infor">
-               <p>
-                   In Stock
-               </p>
-           </div>
-       </div>
-       <div class="img">
-           <img src="${product.img}" alt="">
-       </div>
-       <div class="detail">
-           <div class="detail__Name">
-               <h4>${product.name}</h4>
-           </div>
-           <div class="detail__Caption">
-               <h5>${product.desc}</h5>
-           </div>
-           <div class="detail__Desc">
-               <h6>${product.screen}</h6>
-               <h6>${product.backCamera}</h6>
-               <h6>${product.frontCamera}</h6>
-           </div>
-           <div class="detail__Bot">
-               <div class="bot__Price">
-                   <p>$${product.price}</p>
+           <div class="cyberPhone__Card col-xl-2 col-lg-4 col-md-6 col-sm-8 col-12">
+           <div class="topLogo">
+               <div class="logo">
+                   <span>
+                       <i class="fab fa-apple"></i>
+                   </span>
                </div>
-               <button onclick="getProductsInfor(${product.id})">ADD</button>
+               <div class="infor">
+                   <p>
+                       In Stock
+                   </p>
+               </div>
+           </div>
+           <div class="img">
+               <img src="${product.img}" alt="">
+           </div>
+           <div class="detail">
+               <div class="detail__Name">
+                   <h4>${product.name}</h4>
+               </div>
+               <div class="detail__Caption">
+                   <h5>${product.desc}</h5>
+               </div>
+               <div class="detail__Desc">
+                   <h6>${product.screen}</h6>
+                   <h6>${product.backCamera}</h6>
+                   <h6>${product.frontCamera}</h6>
+               </div>
+               <div class="detail__Bot">
+                   <div class="bot__Price">
+                       <p>$${product.price}</p>
+                   </div>
+                   <button onclick="getProductsInfor(${product.id})">ADD</button>
+               </div>
            </div>
        </div>
-   </div>
    `
    getElm('#cyberPhone__Shop').innerHTML = htmlContent
         }
@@ -259,25 +259,25 @@ const renderCartTable = (dataRender) => {
             `
             <div class="cart__PrList row">
 
-            <div class="cart-style col-2" id="td__img">
+            <div class="cart-style col-xl-3 col-lg-3 col-md-12" id="td__img">
                 <img src="${cartItem.img}" alt="">
             </div>
 
-            <div class="cart-style col-5" id="td__ProName">
+            <div class="cart-stylecol-xl-3 col-lg-3 col-md-12" id="td__ProName">
                 <p>${cartItem.name}</p>
             </div>
 
-            <div class="cart-style col-1" id="td__Number">
+            <div class="cart-style col-xl-3 col-lg-3 col-md-12" id="td__Number">
                 <button><i class="fa fa-angle-left" onclick="adjustment('${cartItem.id}', '${"-"}')"></i></button>
                 <p>${cartItem.quantity}</p>
                 <button><i class="fa fa-chevron-right" onclick="adjustment('${cartItem.id}', '${"+"}')"></i></button>
             </div>
 
-            <div class="cart-style col-3" id="td__Price">
+            <div class="cart-style col-xl-2 col-lg-2 col-md-12" id="td__Price">
                 <p>$${cartItem.totalPrice()}</p>
             </div>
 
-            <div class="cart-style col-1" id="td__Del">
+            <div class="cart-style col-xl-1 col-lg-1 col-md-12" id="td__Del">
                 <button onclick="removal(${cartItem.id})"><i class="fa fa-trash"></i></button>
             </div>
 
@@ -330,9 +330,14 @@ window.delProFrCart = (id) =>{
 
 
 // -------------------turn on or off cart-------------------
+// -------------------turn on or off cart-------------------
 window.turnOffCart = () =>{
     getElm('#cyberPhone__Cart').style.display = 'none'
+    getElm('#cyberPhone__Shop').style.display = 'flex'
+    getElm('#phoneHeader').style.display = 'block'
 }
 window.turnOnCart = () =>{
     getElm('#cyberPhone__Cart').style.display = 'block'
+    getElm('#cyberPhone__Shop').style.display = 'none'
+    getElm('#phoneHeader').style.display = 'none'
 }

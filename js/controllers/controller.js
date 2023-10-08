@@ -11,8 +11,8 @@ function renderProductList(listProduct) {
               <td><img src="${listProduct[i].img}" width="150" height="100" /></td>
               <td>${listProduct[i].desc}</td>
               <td>${listProduct[i].type}</td>
-              <td><button class="btn btn-warning" onclick="productEdition(${listProduct[i].id})">Sửa</button></td>
-              <td><button class="btn btn-danger" onclick="productDeletion(${listProduct[i].id})">Xóa</button></td>
+              <td><button class="btn btn-warning m-0 p-1" onclick="productEdition(${listProduct[i].id})">Sửa</button></td>
+              <td><button class="btn btn-danger m-0 p-1" onclick="productDeletion(${listProduct[i].id})">Xóa</button></td>
           </tr>`;
   }
   document.querySelector("#tbodyPhone").innerHTML = resultString;
